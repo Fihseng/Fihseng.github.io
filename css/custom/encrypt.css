@@ -1,106 +1,104 @@
 @charset "UTF-8";
-/* ====== 加密文章美化样式 ====== */
 
-/* 加密容器 */
+/* ===============================
+   hexo-blog-encrypt × Volantis
+   =============================== */
+
 .hbe-container {
-  background: linear-gradient(
-    145deg,
-    rgba(var(--color-card-rgb), 0.95) 0%,
-    rgba(var(--color-card-rgb), 0.85) 100%
-  ) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  border-radius: 20px !important;
-  padding: 3rem 2.5rem !important;
-  margin: 4rem auto !important;
-  max-width: 650px !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 18px;
+  padding: 3rem 2.5rem;
+  margin: 4rem auto;
+  max-width: 520px;
+
   box-shadow:
-    0 20px 60px rgba(0,0,0,0.15),
-    inset 0 1px 0 rgba(255,255,255,0.2),
-    0 0 0 1px rgba(255,255,255,0.1) !important;
-  position: relative !important;
-  overflow: hidden !important;
+    0 20px 40px rgba(0, 0, 0, 0.15);
+
+  text-align: center;
 }
 
-/* 锁图标 */
-.hbe-input-container::before {
+/* 🔒 锁图标（真实可显示） */
+.hbe-container::before {
   content: "🔒";
-  font-size: 4rem;
   display: block;
-  margin-bottom: 1.5rem;
-  animation: lockFloat 3s ease-in-out infinite;
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+  animation: hbe-float 3s ease-in-out infinite;
 }
 
-@keyframes lockFloat {
+@keyframes hbe-float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
 /* 标题 */
 .hbe-title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(
-    135deg,
-    var(--color-text),
-    var(--color-meta)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.2rem;
 }
 
 /* 输入框 */
 .hbe-input {
   width: 100%;
-  padding: 1.2rem 1.5rem;
-  border: 2px solid rgba(var(--color-border-rgb), 0.3);
+  padding: 1rem 1.2rem;
+  font-size: 1.05rem;
+
   border-radius: 12px;
-  font-size: 1.1rem;
-  background: rgba(var(--color-bg-rgb), 0.8);
-  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .hbe-input:focus {
-  border-color: rgba(var(--color-btn-rgb), 0.7);
-  box-shadow: 0 0 0 4px rgba(var(--color-btn-rgb), 0.15);
-  outline: none;
+  border-color: #5b8cff;
+  box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.2);
 }
 
-/* 按钮 */
+/* 按钮（渐变） */
 .hbe-button {
+  margin-top: 1.4rem;
   width: 100%;
-  margin-top: 1.5rem;
-  padding: 1.2rem;
+  padding: 1rem;
+
   border-radius: 12px;
-  background: linear-gradient(
-    135deg,
-    rgba(var(--color-btn-rgb), 1),
-    rgba(var(--color-btn-hover-rgb), 1)
-  );
+  border: none;
+
+  background: linear-gradient(135deg, #5b8cff, #7f7cff);
   color: #fff;
-  font-size: 1.1rem;
+
+  font-size: 1.05rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .hbe-button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(91, 140, 255, 0.35);
 }
 
-/* 错误提示 */
+/* ❌ 错误提示 → 红色卡片 */
 .hbe-wrong-pass-message {
-  margin-top: 1.5rem;
-  padding: 1rem;
+  margin-top: 1.2rem;
+  padding: 0.9rem 1rem;
+
   border-radius: 10px;
-  background: rgba(255, 59, 48, 0.1);
-  color: #ff3b30;
+  background: rgba(255, 77, 79, 0.12);
+  color: #ff4d4f;
+
+  font-size: 0.95rem;
 }
 
 /* 移动端 */
 @media (max-width: 768px) {
   .hbe-container {
-    padding: 2rem 1.5rem;
     margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
   }
 }
