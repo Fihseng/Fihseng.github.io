@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* ====== 加密文章美化样式 ====== */
+
+/* 加密容器 */
+.hbe-container {
+  background: linear-gradient(
+    145deg,
+    rgba(var(--color-card-rgb), 0.95) 0%,
+    rgba(var(--color-card-rgb), 0.85) 100%
+  ) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  border-radius: 20px !important;
+  padding: 3rem 2.5rem !important;
+  margin: 4rem auto !important;
+  max-width: 650px !important;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.2),
+    0 0 0 1px rgba(255,255,255,0.1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* 锁图标 */
+.hbe-input-container::before {
+  content: "🔒";
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  animation: lockFloat 3s ease-in-out infinite;
+}
+
+@keyframes lockFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 标题 */
+.hbe-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-text),
+    var(--color-meta)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 输入框 */
+.hbe-input {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  border: 2px solid rgba(var(--color-border-rgb), 0.3);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background: rgba(var(--color-bg-rgb), 0.8);
+  transition: all 0.3s ease;
+}
+
+.hbe-input:focus {
+  border-color: rgba(var(--color-btn-rgb), 0.7);
+  box-shadow: 0 0 0 4px rgba(var(--color-btn-rgb), 0.15);
+  outline: none;
+}
+
+/* 按钮 */
+.hbe-button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--color-btn-rgb), 1),
+    rgba(var(--color-btn-hover-rgb), 1)
+  );
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hbe-button:hover {
+  transform: translateY(-2px);
+}
+
+/* 错误提示 */
+.hbe-wrong-pass-message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+}
+
+/* 移动端 */
+@media (max-width: 768px) {
+  .hbe-container {
+    padding: 2rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+}
