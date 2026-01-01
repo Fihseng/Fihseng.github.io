@@ -1,73 +1,88 @@
 @charset "UTF-8";
 
-/* ===== Volantis × 加密文章美化 ===== */
+/* ===== 加密文章整体容器 ===== */
+.hexo-blog-encrypt {
+  max-width: 650px;
+  margin: 4rem auto;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
 
-/* 命中加密输入框 */
-.post-content input[type="password"] {
-  display: block;
-  width: 100%;
-  max-width: 420px;
-  margin: 1.5rem auto 0;
+  background: rgba(var(--color-card-rgb), 0.9);
+  backdrop-filter: blur(20px) saturate(180%);
 
-  padding: 1rem 1.2rem;
-  font-size: 1.05rem;
-
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  background: rgba(255, 255, 255, 0.9);
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-  outline: none;
-}
-
-.post-content input[type="password"]:focus {
-  border-color: #5b8cff;
   box-shadow:
-    0 0 0 3px rgba(91, 140, 255, 0.25),
-    0 12px 30px rgba(0, 0, 0, 0.18);
-}
-
-/* 包裹提示文字 → 卡片 */
-.post-content > p:first-of-type {
-  max-width: 520px;
-  margin: 3rem auto 0;
-  padding: 2.8rem 2.2rem 2.2rem;
+    0 20px 60px rgba(0,0,0,.15),
+    inset 0 1px 0 rgba(255,255,255,.2);
 
   text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(18px);
-  border-radius: 18px;
-
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  position: relative;
 }
 
 /* 🔒 锁图标 */
-.post-content > p:first-of-type::before {
+.hexo-blog-encrypt::before {
   content: "🔒";
+  font-size: 4rem;
   display: block;
-  font-size: 3.5rem;
   margin-bottom: 1.2rem;
-  animation: encrypt-float 3s ease-in-out infinite;
+  animation: lockFloat 3s ease-in-out infinite;
 }
 
-/* 漂浮动画 */
-@keyframes encrypt-float {
-  0%, 100% { transform: translateY(0); }
+@keyframes lockFloat {
+  0%,100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
-/* 错误提示（密码错误时） */
-.post-content .hbe-wrong-pass-message {
-  max-width: 420px;
-  margin: 1rem auto 0;
-  padding: 0.9rem 1rem;
+/* 标题文字 */
+.hexo-blog-encrypt p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
 
+/* 输入框 */
+.hexo-blog-encrypt .hbe-input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(var(--color-border-rgb), .3);
+  font-size: 1.05rem;
+}
+
+.hexo-blog-encrypt .hbe-input:focus {
+  outline: none;
+  border-color: rgba(var(--color-btn-rgb), .7);
+  box-shadow: 0 0 0 4px rgba(var(--color-btn-rgb), .15);
+}
+
+/* 按钮 */
+.hexo-blog-encrypt .hbe-submit {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(var(--color-btn-rgb),1),
+    rgba(var(--color-btn-hover-rgb),1)
+  );
+
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform .25s ease;
+}
+
+.hexo-blog-encrypt .hbe-submit:hover {
+  transform: translateY(-2px);
+}
+
+/* ❌ 错误提示（红色卡片） */
+.hexo-blog-encrypt .hbe-error {
+  margin-top: 1.2rem;
+  padding: .9rem 1rem;
   border-radius: 10px;
-  background: rgba(255, 77, 79, 0.12);
-  color: #ff4d4f;
-  text-align: center;
+  background: rgba(255, 59, 48, .12);
+  color: #ff3b30;
 }
