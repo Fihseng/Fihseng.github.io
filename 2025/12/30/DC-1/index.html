@@ -1631,7 +1631,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1767350042261),
+    lastupdate: new Date(1767350684036),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2537,30 +2537,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   overflow: hidden;
 }
 
-/* 玻璃背景效果 */
-.hbe.hbe-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(156, 136, 255, 0.1) 0%,
-    rgba(156, 136, 255, 0.05) 100%
-  );
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  z-index: 0;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-}
-
 /* 内容容器 */
 .hbe.hbe-content {
   position: relative;
@@ -2632,32 +2608,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   }
   100% {
     box-shadow: 0 0 0 0 rgba(156, 136, 255, 0);
-  }
-}
-
-/* 确保在暗色模式下也有良好表现 */
-@media (prefers-color-scheme: dark) {
-  .hbe.hbe-container::before {
-    background: linear-gradient(
-      135deg,
-      rgba(156, 136, 255, 0.15) 0%,
-      rgba(156, 136, 255, 0.08) 100%
-    );
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .hbe.hbe-input-field.hbe-input-field-blink {
-    background: rgba(255, 255, 255, 0.1);
-    color: #e2dcff;
-  }
-  
-  .hbe.hbe-input-field.hbe-input-field-blink:focus {
-    background: rgba(255, 255, 255, 0.15);
-  }
-  
-  .hbe.hbe-input-label-content.hbe-input-label-content-blink {
-    background: rgba(156, 136, 255, 0.15);
-    color: #d0c7ff;
   }
 }
 
