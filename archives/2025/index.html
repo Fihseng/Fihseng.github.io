@@ -1627,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1768470258495),
+    lastupdate: new Date(1768806937591),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2399,9 +2399,84 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal "  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://fihseng.github.io/2025/12/30/DC-1/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Fihseng的小空间">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Fihseng的小空间">
+    <meta itemprop="description" content="这是Fihseng的空间">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2025/12/30/DC-1/"  itemprop="url">
+        DC-1
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1、环境相关说明​	攻击机：kali vmware
+​	靶机：DC-1 virtualBox
+​	攻击目标：5个flag,最终目标是在root的主目录中找到并读取该标志！
+​	虚拟机相关设置：
+​		攻击机和靶机网络设置为桥接模式
+2、实验过程​	1.前期信息收集
+​	首先，查看kali攻击机的IP，为192.168.56.101，攻击机和靶机在同一个IP段下，不知道靶机IP，用nmap查看...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2025-12-30T00:00:00+08:00">2025-12-30</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%9D%B6%E6%9C%BA/">靶机</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%B6%E6%9C%BA/DC/">DC</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%9D%B6%E6%9C%BA/" itemprop="url"><span itemprop="name">靶机</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%9D%B6%E6%9C%BA/DC/" itemprop="url"><span itemprop="name">DC</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2025/12/30/DC-1/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -2574,14 +2649,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <ul class="entry navigation">
         
           <li><a class="flat-box"
-            title="/categories/Java/" href="/categories/Java/"
-            active-action="action-categoriesJava"
-            ><div class='name'>Java</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
             title="/categories/Markdown/" href="/categories/Markdown/"
             active-action="action-categoriesMarkdown"
             ><div class='name'>Markdown</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E9%9D%B6%E6%9C%BA/" href="/categories/%E9%9D%B6%E6%9C%BA/"
+            active-action="action-categoriesE99DB6E69CBA"
+            ><div class='name'>靶机</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E9%9D%B6%E6%9C%BA/DC/" href="/categories/%E9%9D%B6%E6%9C%BA/DC/"
+            active-action="action-categoriesE99DB6E69CBADC"
+            ><div class='name'>DC</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -2606,7 +2686,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-      <a href="/tags/Java/" style="font-size: 24px; color: #555">Java</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a>
+      <a href="/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a> <a href="/tags/%E9%9D%B6%E6%9C%BA-DC/" style="font-size: 14px; color: #999">靶机,DC</a>
     </div>
   </section>
 
@@ -2634,7 +2714,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>3 篇</div>
+          <div>2 篇</div>
         </div>
       
 
@@ -2649,7 +2729,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>5.3k 字</div>
+          <div>1.6k 字</div>
         </div>
       
 
