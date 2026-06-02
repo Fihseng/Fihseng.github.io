@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  
-  <link rel="canonical" href="https://Fihseng.github.io/about/"/>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://Fihseng.github.io/archives/2026/03/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,17 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>关于 - Fihseng的小空间</title>
+  <title>归档：2026/3 - Fihseng的小空间</title>
   <meta name="keywords" content="学习">
   <meta desc name="description" content="这是Fihseng的空间 - Fihseng - Fihseng的小空间">
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fihseng的小空间">
-<meta property="og:url" content="https://fihseng.github.io/about/index.html">
+<meta property="og:url" content="https://fihseng.github.io/archives/2026/03/index.html">
 <meta property="og:site_name" content="Fihseng的小空间">
-<meta property="og:description" content="一名00后，在校大学生">
+<meta property="og:description" content="这是Fihseng的空间">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2025-12-29T12:46:31.121Z">
-<meta property="article:modified_time" content="2025-12-29T12:46:31.121Z">
 <meta property="article:author" content="Fihseng">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -2062,13 +2060,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+        
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
@@ -2329,7 +2329,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper docs search' style="display: none;">
+      <div id="half" class='cover-wrapper  search' style="display: ;">
         
   <div class='cover-bg lazyload placeholder' data-bg="/images/background.jpg"></div>
 
@@ -2390,9 +2390,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=' no_sidebar'>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md  article-type-docs" id="docs" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://fihseng.github.io/about/index.html">
+<div id="l_main" class=''>
+	
+		
+  <section class="post-list">
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal "  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://fihseng.github.io/2026/03/07/SQL注入完整标准流程/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Fihseng的小空间">
   </span>
@@ -2401,71 +2415,266 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="这是Fihseng的空间">
   </span>
   
-
-
+  
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  <div class="article-meta" id="top">
+  
     
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2026/03/07/SQL%E6%B3%A8%E5%85%A5%E5%AE%8C%E6%95%B4%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/"  itemprop="url">
+        SQL注入完整标准流程
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
     
+      
+        第一阶段：发现与探测1. 寻找注入点在参数后添加测试字符，观察页面变化：
+123456&#x27;  # 单引号&quot;  # 双引号1 and 1=1  # 恒真1 and 1=2  # 恒假;  # 分号闭合--  # 注释尝试
+
+
+
+2. 判断注入类型
+数字型：?id=1 and 1=1 正常，?id=1 and 1=2 异常
+字符型：?id=1&#39; and &#39;1&#...
+      
     
-      <span hidden itemprop="name headline">
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
         
-      </span>
-    
-  </div>
-
-
-  <div id="layoutHelper-page-plugins"></div>
-  <div id="post-body" itemprop="articleBody">
-    <p>一名00后，在校大学生</p>
-
-  </div>
-  
-  
-    
-    <div class='footer'>
-       <!-- 参考资料、相关资料等 -->
+        <time itemprop="dateCreated datePublished" datetime="2026-03-07T00:00:00+08:00">2026-03-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/SQL%E6%B3%A8%E5%85%A5/">SQL注入</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/SQL%E6%B3%A8%E5%85%A5/" itemprop="url"><span itemprop="name">SQL注入</span></a>
+            </span>
+          
+        
+      </div>
       
-       <!-- 相关文章 -->
-      
-      <!-- 版权声明组件 -->
-      
-      <!-- 打赏组件 -->
+        <div>
+          <a class='readmore' href='/2026/03/07/SQL%E6%B3%A8%E5%85%A5%E5%AE%8C%E6%95%B4%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
       
     </div>
   
-  
-    
-
-
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
-      
-    </div>
-    <!-- Custom Files bottomMeta begin -->
-    
-    <!-- Custom Files bottomMeta end -->
-  </div>
-
-
-  
-  
-
-  
-  <!-- Custom Files postEnd begin-->
-  
-  <!-- Custom Files postEnd end-->
-</article>
-
-
-
 
 </div>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+  
+
+
+	
+</div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+  
+
+  
+    
+    
+      
+<section class="widget blogger desktop mobile pjax">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='/images/touxiang.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>Fihseng</h2>
+        
+        
+        
+          <p><span id="jinrishici-sentence">Fihseng的小空间</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/"
+              class="social fa-solid fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:Fihseng@qq.com"
+              class="social fa-solid fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/Fihseng/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+    
+  
+
+  
+    
+    
+      
+  
+  <section class="widget category desktop pjax">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/Markdown/" href="/categories/Markdown/"
+            active-action="action-categoriesMarkdown"
+            ><div class='name'>Markdown</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/SQL%E6%B3%A8%E5%85%A5/" href="/categories/SQL%E6%B3%A8%E5%85%A5/"
+            active-action="action-categoriesSQLE6B3A8E585A5"
+            ><div class='name'>SQL注入</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/mysql/" href="/categories/mysql/"
+            active-action="action-categoriesmysql"
+            ><div class='name'>mysql</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/mysql/mysql-1/" href="/categories/mysql/mysql-1/"
+            active-action="action-categoriesmysqlmysql-1"
+            ><div class='name'>mysql-1</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E9%9D%B6%E6%9C%BA/" href="/categories/%E9%9D%B6%E6%9C%BA/"
+            active-action="action-categoriesE99DB6E69CBA"
+            ><div class='name'>靶机</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E9%9D%B6%E6%9C%BA/DC/" href="/categories/%E9%9D%B6%E6%9C%BA/DC/"
+            active-action="action-categoriesE99DB6E69CBADC"
+            ><div class='name'>DC</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+    
+  
+
+  
+    
+    
+      
+  
+  <section class="widget tagcloud desktop mobile pjax">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/Markdown/" style="font-size: 14px; color: #f29e38">Markdown</a> <a href="/tags/SQL%E6%B3%A8%E5%85%A5/" style="font-size: 14px; color: #f29e38">SQL注入</a> <a href="/tags/mysql/" style="font-size: 14px; color: #f29e38">mysql</a> <a href="/tags/%E9%9D%B6%E6%9C%BA-DC/" style="font-size: 14px; color: #f29e38">靶机,DC</a> <a href="/tags/%E9%9D%B6%E6%9C%BA-%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #f29e38">靶机,渗透测试</a>
+    </div>
+  </section>
+
+
+    
+  
+
+  
+
+  
+    
+    
+      
+<section class="widget desktop pjax">
+  
+  <header>
+    
+      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="webinfo">
+      
+        <div class="webinfo-item">
+          <div>文章数目：</div>
+          <div>5 篇</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>已运行时间：</div>
+          <div id="webinfo-runtime-count"></div>
+        </div>
+      
+
+
+      
+        <div class="webinfo-item">
+          <div>本站总字数：</div>
+          <div>5.9k 字</div>
+        </div>
+      
+
+      
+
+      
+
+      
+    </div>
+  </div>
+</section>
+
+    
   
 
 
@@ -2496,27 +2705,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- pjax占位 -->
   </div>
 
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
   <!-- Custom Files side begin -->
   
   <!-- Custom Files side end -->
 </aside>
-
 
 
           <!--此文件用来存放一些不方便取值的变量-->
@@ -2534,14 +2726,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.add("show");
+    l_header.classList.remove("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="none";
-      cover_wrapper.style.display="none";
+      cover_wrapper.id="half";
+      cover_wrapper.style.display="";
       scroll_down.style.display="none";
     
   
@@ -3142,7 +3334,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Fihseng的小空间","url":"https://Fihseng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Fihseng","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://Fihseng.github.io/","sameAs":["https://github.com/volantis-x"],"description":"这是Fihseng的空间"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://Fihseng.github.io/","name":"Fihseng的小空间"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Fihseng的小空间","url":"https://Fihseng.github.io/","keywords":"学习","description":"这是Fihseng的空间","author":{"@type":"Person","name":"Fihseng","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://Fihseng.github.io/","description":"这是Fihseng的空间"},"publisher":{"@type":"Organization","name":"Fihseng的小空间","url":"https://Fihseng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://Fihseng.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于","description":"这是Fihseng的空间","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://fihseng.github.io/about/index.html"},"author":{"@type":"Person","name":"Fihseng","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://Fihseng.github.io/"},"publisher":{"@type":"Organization","name":"Fihseng的小空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://fihseng.github.io/about/index.html","wordCount":0,"datePublished":"2025-12-29T12:46:31.121Z","dateModified":"2025-12-29T12:46:31.121Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Fihseng的小空间","url":"https://Fihseng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Fihseng","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://Fihseng.github.io/","sameAs":["https://github.com/volantis-x"],"description":"这是Fihseng的空间"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://Fihseng.github.io/","name":"Fihseng的小空间"}},{"@type":"ListItem","position":2,"item":{"@id":"https://Fihseng.github.io/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://Fihseng.github.io/archives/2026/","name":"2026年"}},{"@type":"ListItem","position":4,"item":{"@id":"https://Fihseng.github.io/archives/2026/3/","name":"3月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Fihseng的小空间","url":"https://Fihseng.github.io/","keywords":"学习","description":"这是Fihseng的空间","author":{"@type":"Person","name":"Fihseng","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://Fihseng.github.io/","description":"这是Fihseng的空间"},"publisher":{"@type":"Organization","name":"Fihseng的小空间","url":"https://Fihseng.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://Fihseng.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"这是Fihseng的空间","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Fihseng","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://Fihseng.github.io/"},"publisher":{"@type":"Organization","name":"Fihseng的小空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
